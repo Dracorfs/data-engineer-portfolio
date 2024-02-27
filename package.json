@@ -1,7 +1,13 @@
 {
   "name": "",
-  "type": "module",
   "version": "0.0.1",
+  "dependencies": {
+    "@astrojs/check": "^0.5.6",
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.4.5",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -9,9 +15,5 @@
     "preview": "astro preview",
     "astro": "astro"
   },
-  "dependencies": {
-    "astro": "^4.4.5",
-    "@astrojs/check": "^0.5.6",
-    "typescript": "^5.3.3"
-  }
+  "type": "module"
 }
