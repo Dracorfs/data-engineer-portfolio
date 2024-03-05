@@ -1,19 +1,27 @@
 {
-  "name": "",
-  "version": "0.0.1",
-  "dependencies": {
-    "@astrojs/check": "^0.5.6",
-    "@astrojs/tailwind": "^5.1.0",
-    "astro": "^4.4.5",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5.3.3"
-  },
+  "name": "dracorfs",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "type": "module"
+  "dependencies": {
+    "@headlessui/react": "^1.7.15",
+    "@heroicons/react": "^1.0.6",
+    "emailjs-com": "^3.2.0",
+    "next": "^12.3.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-toastify": "^9.1.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "eslint": "8.44.0",
+    "eslint-config-next": "13.4.7",
+    "postcss": "^8.4.25",
+    "tailwindcss": "^3.3.2"
+  }
 }
