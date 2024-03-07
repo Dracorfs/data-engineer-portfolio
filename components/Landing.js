@@ -7,16 +7,7 @@ export default function Landing() {
         <section className="[background-image:url(/img/hero.webp)] bg-top bg-cover h-[915px] lg:h-[700px] flex items-center">  
             <div id="inicio" className=" max-w-screen-xl mx-auto md:w-4/6 2xl:w-4/6 md:flex">
                 <div className="flex flex-col lg:flex-row items-center justify-center px-3 md:px-0">
-                    <div className="lg:w-1/2 lg:order-last order-first grid place-items-end">
-                        <div >
-                            <img 
-                                className="w-auto h-auto"
-                                src="/img/aboutme.jpg" 
-                                alt="Imagen de Andres Martinez Developer" />
-                        </div>
-                    </div>
-                    <div className="lg:w-1/2 lg:order-first order-last">
-                        <div className=" text-center lg:text-left">
+                        <div className="text-center lg:text-left">
                             <div>
                                 <p className="text-[#9ae5db] font-semibold text-2xl mb-2 leading-none">Hi, I&apos;m</p>
                                 <h1 className="text-4xl font-title font-black leading-none md:text-6xl lg:text-5xl 2xl:text-7xl text-white">{headerData.nombre}</h1>
@@ -43,7 +34,6 @@ export default function Landing() {
                                 </ul>
                             </div>
                         </div>
-                    </div>
                 </div>
             </div>
         </section>
