@@ -14,8 +14,8 @@ export default function Proyectos() {
 
     return(
         <div>
-            <div id="proyectos" className="max-w-screen-xl mx-auto md:w-5/6 lg:w-4/6 pt-10">
-                <h2 className="text-4xl font-title font-extrabold tracking-wider leading-none md:text-5xl lg:text-5xl text-white text-center mt-5 mb-10">Proyectos</h2>
+            <div id="projects" className="max-w-screen-xl mx-auto md:w-5/6 lg:w-4/6 pt-10">
+                <h2 className="text-4xl font-title font-extrabold tracking-wider leading-none md:text-5xl lg:text-5xl text-white text-center mt-5 mb-10">Projects</h2>
                 <div className="grid place-content-center md:grid-cols-2 lg:grid-cols-2 gap-6 mb-10 md:mx-0 px-3 md:px-0">
                     {proyectosData.map(proyecto =>{
                         const bigProyImg = bigProyImgs[proyecto.id] || proyecto.imagenes[0];
@@ -46,7 +46,7 @@ export default function Proyectos() {
                                     </div>
                                     <div className="flex gap-3 items-center justify-center pb-5">
                                         <a target="_blank" href={proyecto.sitioWeb} className="flex flex-1 gap-1 items-center justify-center py-2.5 px-5 text-sm text-white font-medium  bg-colorboton rounded-full border transition duration-300 hover:bg-colorboton hover:scale-105 hover:shadow-[0_0_20px_3px_rgba(30,125,103,0.7)]">
-                                            Sitio Web
+                                            Website
                                             <IconGlobal />
                                         </a>
                                         

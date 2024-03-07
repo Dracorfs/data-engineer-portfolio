@@ -1,8 +1,8 @@
 export const sobremiData = {
-    titulo: "¿Quien Soy?",
-    descripcion1: "Soy Andrés Martínez, un apasionado Ingeniero de Datos, y mi dedicación a la tecnología, la programación y la gestión de datos me impulsa constantemente. Como Data Engineer, me he especializado en el apasionante mundo del backend de datos.",
-    descripcion2: "Me encanta desafiar los límites y explorar nuevas tecnologías para ofrecer soluciones creativas y eficientes en el manejo y procesamiento de datos. ",
-    descripcion3: "Innovador, proactivo y con la capacidad para diseñar, implementar y mantener pipelines de datos robustos y escalables. Me adapto a las necesidades del equipo y me comprometo plenamente con los objetivos de trabajo establecidos en el ámbito de la ingeniería de datos.",
+    titulo: "About me",
+    descripcion1: "I am Andrés Martínez, a highly skilled Business Intelligence Developer, with 2 years of experience leveraging data analysis, visualization and diverse BI Tools to extract valuable insights for data-driven decision making.",
+    descripcion2: "My focus lies in the fascinating realm of data backend. I thrive on pushing boundaries and exploring new technologies to deliver creative and efficient solutions for data handling and processing.",
+    descripcion3: "Innovative, proactive, and adept at designing, implementing, and maintaining robust and scalable data pipelines. I am adaptable to team needs and wholeheartedly committed to achieving established work objectives in the field of data engineering.",
     imagen: "sobremi"
 }
 

@@ -16,17 +16,17 @@ export const redesData = [
 export const enlacesData = [
     {
         id:1,
-        name: "Sobre mi",
-        link: "#sobremi"
+        name: "About me",
+        link: "#aboutme"
     },
     {
         id:2,
-        name: "Proyectos",
-        link: "#proyectos"
+        name: "Projects",
+        link: "#projects"
     },
     {
         id:3,
-        name: "Contacto",
-        link: "#contacto"
+        name: "Contact",
+        link: "#contact"
     }
-]
+  ]
