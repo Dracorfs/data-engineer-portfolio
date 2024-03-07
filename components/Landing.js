@@ -9,7 +9,6 @@ export default function Landing() {
                 <div className="flex flex-col lg:flex-row items-center justify-center px-3 md:px-0">
                         <div className="text-center lg:text-left">
                             <div>
-                                <p className="text-[#9ae5db] font-semibold text-2xl mb-2 leading-none">Hi, I&apos;m</p>
                                 <h1 className="text-4xl font-title font-black leading-none md:text-6xl lg:text-5xl 2xl:text-7xl text-white">{headerData.nombre}</h1>
                                 <p className="mb-4 mt-2 lg:mt-0 text-2xl font-semibold font-secundary leading-none md:text-3xl lg:text-4xl text-textdestacado"> {headerData.titulo}</p>
                                 <p className="mb-6 text-lg font-normal text-grisclaro2 md:text-base 2xl:text-xl [text-wrap:balance]">{headerData.descripcion}</p>
