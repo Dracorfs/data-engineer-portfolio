@@ -1,5 +1,5 @@
 export const headerData = {
-    nombre: "Andres Martinez",
+    nombre: "Andrés Martínez",
     titulo: "Business Intelligence Developer",
     descripcion: "",
     imagen: "andresmartinez"

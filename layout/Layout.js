@@ -6,7 +6,7 @@ export default function Layout({ children }) {
     return (
         <> 
             <Head>
-                <title>Andres Martinez | Business Intelligence Developer</title>
+                <title>Andrés Martínez | Business Intelligence Developer</title>
                 <meta name='description' content="Business Intelligence Developer" />
                 <link rel="icon" type="image/svg+xml" href="/img/favicon.ico" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,10 +16,10 @@ export default function Layout({ children }) {
                 <meta name="robots" content="index, follow" />
                 <meta name="author" content="Andres Martinez" />
                 <meta name="keywords" content="Business Intelligence Developer" />
-                <meta name="og:title" content="Andres Martinez | Business Intelligence Developer" />
+                <meta name="og:title" content="Andrés Martínez | Business Intelligence Developer" />
                 <meta name="og:description" content="Business Intelligence Developer" />
                 <meta name="og:image" content="/img/metaimg.webp" />
-                <meta name="og:image:alt" content="Imagen del sitio web de Andres Martinez" />
+                <meta name="og:image:alt" content="Imagen del sitio web de Andrés Martínez" />
             </Head>
                 
             <Header />
