@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <Layout>  
         <Landing />
-        <div className="[background-image:url(/img/bg-web.webp)] bg-center bg-cover">
+        <div className="[background-image:url(/img/bg-web.svg)]">
           <Sobremi />
           <Proyectos />
           <Tecnologias />

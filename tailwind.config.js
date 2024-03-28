@@ -9,7 +9,7 @@ module.exports = {
       fontFamily: {
         'title': ['Montserrat'],
         'secundary': ['Neuton'],
-        'text': ['Maven Pro']
+        'text': ['Maven Pro'] //['source-serif-pro', 'Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif']
       },
       colors: {
         transparent: "transparent",
@@ -26,8 +26,8 @@ module.exports = {
         naranja: "#FF6D09",
         naranja700: "#c2410c",
         azul: "#010309",
-        textdestacado: "#20bfa9",
-        colorboton: "#169483",
+        textdestacado: "#3a6ea5",
+        colorboton: "#004e98",
         colorboton2: "#441e7d",
         text: "#AEB3B9"
       },

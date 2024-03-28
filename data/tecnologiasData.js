@@ -58,29 +58,5 @@ export const tecnologiasData = [
         nombre: "Glue",
         imagen: "glue.png",
         descripcion: ""
-    },
-    {
-        id: 11,
-        nombre: "Athena",
-        imagen: "athena.png",
-        descripcion: ""
-    },
-    {
-        id: 12,
-        nombre: "RDS",
-        imagen: "rds.png",
-        descripcion: ""
-    },
-    {
-        id: 13,
-        nombre: "DynamoDB",
-        imagen: "dynamo-db.svg",
-        descripcion: ""
-    },
-    {
-        id: 14,
-        nombre: "Quicksight",
-        imagen: "quicksight.png",
-        descripcion: ""
     }
 ];
