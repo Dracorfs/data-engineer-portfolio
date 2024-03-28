@@ -86,7 +86,7 @@ export default function Contacto() {
                         {redesData.map(red => (
                             <li  key={red.id} className='cursor-pointer transition-all duration-300 hover:scale-150'>
                                 <a target="_blank" href={red.sitioWeb}>
-                                    <img className='w-4 h-4' title={red.nombre} src={`/img/${red.imagen}.svg`} alt={`imagen red social ${red.nombre}`} />
+                                    <img className='w-4 h-4' title={red.nombre} src={`/img/${red.imagen}`} alt={`imagen red social ${red.nombre}`} />
                                 </a>
                             </li>
                         ))}
