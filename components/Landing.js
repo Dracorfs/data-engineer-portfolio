@@ -1,5 +1,4 @@
 import { headerData } from "../data/headerData"
-import { redesData } from "../data/redesData"
 import Link from "next/link"
 
 export default function Landing() {
@@ -27,15 +26,6 @@ export default function Landing() {
                                     Download CV
                                 </a>
                             </Link>
-                            {/* <ul className='flex gap-4'>
-                                {redesData.map(red => (
-                                    <li  key={red.id} className='cursor-pointer transition-all duration-300 hover:scale-150'>
-                                        <a target="_blank" href={red.sitioWeb}>
-                                            <img className='w-4 h-4' title={red.nombre} src={`/img/${red.imagen}`} alt={`imagen red social ${red.nombre}`} />
-                                        </a>
-                                    </li>
-                                ))}
-                            </ul>*/}
                         </div>
                     </div>
                 </div>
