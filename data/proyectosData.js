@@ -17,7 +17,7 @@ export const proyectosData = [
         ]
     },
     {
-        id: 1,
+        id: 2,
         nombreProyecto: "Limpieza de dataset",
         descripcionProyecto: "Limpieza de dataset, creacion de base de datos.",
         link: "https://github.com/Andres12893/car_prices_project",
