@@ -7,7 +7,7 @@ export const proyectosData = [
         webpage_name: "Web",
         webpage_logo: "novypro.svg",
         imagenes: [
-            "destacame-dashboard.png"
+            "proyectos/destacame-dashboard.png"
         ],
         tecnologias: [
             {
@@ -24,7 +24,7 @@ export const proyectosData = [
         webpage_name: "GitHub",
         webpage_logo: "github.svg",
         imagenes: [
-            "dataset-cover.jpg"
+            "proyectos/dataset-cover.jpg"
         ],
         tecnologias: [
             {
@@ -34,6 +34,31 @@ export const proyectosData = [
             {
                 name: "SQL",
                 image: "tecnologias-andy/sql.webp"
+            }
+        ]
+    },
+    {
+        id: 3,
+        nombreProyecto: "Mercado Libre Web Scraping",
+        descripcionProyecto: "Web Scraping through Mercado Libre's website. Calculate an average price and conditions (such as coupons), identifying when something is 'cheap'.",
+        link: "https://github.com/Andres12893/Mercado-Libre-Web-Scrapping",
+        webpage_name: "GitHub",
+        webpage_logo: "github.svg",
+        imagenes: [
+            "proyectos/mercado-libre-autos.jpg"
+        ],
+        tecnologias: [
+            {
+                name: "Python",
+                image: "tecnologias-andy/python.png"
+            },
+            {
+                name: "SQL",
+                image: "tecnologias-andy/sql.webp"
+            },
+            {
+                name: "AWS",
+                image: "tecnologias-andy/aws.jpg"
             }
         ]
     }
