@@ -55,8 +55,8 @@ export const tecnologiasData = [
     },
     {
         id: 10,
-        nombre: "Glue",
-        imagen: "glue.png",
+        nombre: "Amplitude",
+        imagen: "amplitude.png",
         descripcion: ""
     }
 ];
