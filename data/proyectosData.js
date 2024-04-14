@@ -5,7 +5,7 @@ export const proyectosData = [
         descripcionProyecto: "Overview destacame Dashboard",
         link: "https://www.novypro.com/project/overview-destacame-dashboard",
         webpage_name: "Web",
-        webpage_logo: "novypro.svg",
+        webpage_logo: "novypro.png",
         imagenes: [
             "proyectos/destacame-dashboard.png"
         ],
