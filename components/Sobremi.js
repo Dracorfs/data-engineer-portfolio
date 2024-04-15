@@ -7,12 +7,11 @@ export default function Sobremi() {
             <div id="aboutme" className="max-w-screen-xl mx-auto md:w-5/6 lg:w-4/6 px-3 md:px-0 pt-10">
                 <h2 className="text-4xl font-title font-extrabold tracking-wider leading-none md:text-5xl lg:text-5xl text-[#004e98] text-center mt-5 mb-10">{sobremiData.titulo}</h2>
                 <div className="md:flex gap-8 items-center justify-between md:mx-0">
-                    <div className="md:w-2/5 border-8 border-[#242424]">
-                        <img 
-                            src="/img/aboutme.jpg" 
-                            alt="Imagen Andres Martinez"
-                        />
-                    </div>
+                    <img 
+                        className="border-8 border-[#242424]"
+                        src="/img/aboutme.jpg" 
+                        alt="Imagen Andres Martinez"
+                    />
                     <div className="md:w-3/5">
                         <p className="mb-4 text-[#242424] lg:text-base 2xl:text-lg [text-wrap:pretty]">{sobremiData.descripcion1}</p>
                         <p className="mb-4 text-[#242424] lg:text-base 2xl:text-lg [text-wrap:pretty]">{sobremiData.descripcion2}</p>
