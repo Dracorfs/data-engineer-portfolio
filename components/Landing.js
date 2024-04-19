@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Landing() {
     return (
-        <section className="relative overflow-hidden">
+        <section className="h-svh relative overflow-hidden">
             {/* Background with backdrop filter */}
             <div className="absolute inset-0 bg-top bg-cover z-0">
                 <img src="/img/hero.jpg" alt="Hero Background" className="w-full h-full object-cover object-center opacity-40" />
@@ -11,7 +11,7 @@ export default function Landing() {
             </div>
 
             {/* Content container */}
-            <div id="inicio" className="relative z-10 flex flex-col items-start justify-center h-screen pl-6">
+            <div id="inicio" className="relative z-10 flex flex-col items-start justify-center h-screen">
                 <div className="text-center lg:text-left mx-auto md:w-4/6 2xl:w-4/6 ">
                     <div>
                         <h1 className="text-4xl font-title font-black leading-none md:text-6xl lg:text-5xl 2xl:text-7xl text-[#004e98]">{headerData.nombre}</h1>
