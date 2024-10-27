@@ -17,27 +17,27 @@ export default function Contacto() {
             return;
         }
 
-        emailjs.sendForm('service_4ahhxwl', 'template_dm4vv9y', form.current, 'IYV1jTyhjv08dD_Qs')
-        .then((result) => {
-        toast.success("Mensaje Enviado Correctamente", {
-            theme: "colored"
-          });
-    
-          // Restablecer los valores de los campos del formulario
-          setFormValues({});
-          form.current.reset();
-        })
-        .catch((error) => {
-          console.log(error.text);
-        });
+        emailjs.sendForm('service_1n4md0r', 'template_wzrsakf', form.current, '5Jb2xVlkRNAwR_TI1')
+            .then((result) => {
+                toast.success("Mensaje Enviado Correctamente", {
+                    theme: "colored"
+                });
+        
+                // Restablecer los valores de los campos del formulario
+                setFormValues({});
+                form.current.reset();
+            })
+            .catch((error) => {
+                console.log(error.text);
+            });
     };
 
     const handleInputChange = (e) => {
         setFormValues({
-          ...formValues,
-          [e.target.name]: e.target.value
+            ...formValues,
+            [e.target.name]: e.target.value
         });
-      };
+    };
 
     return(
         <div>
