@@ -39,7 +39,8 @@ module.exports = {
       },
       "animation": {
         'infinite-scroll': 'infinite-scroll 60s linear infinite',
-        'infinite-scroll-reverse': 'infinite-scroll-reverse 35s linear infinite'
+        'infinite-scroll-reverse': 'infinite-scroll-reverse 35s linear infinite',
+        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite'
       },
       "keyframes": {
         'infinite-scroll': {
