@@ -14,9 +14,12 @@ export default function Sobremi() {
                     {/* Image */}
                     <div className="flex justify-center">
                         <img
-                            className="w-64 h-64 md:w-80 md:h-80 rounded-xl shadow-lg object-cover border-4 border-primary"
+                            className="w-64 h-64 md:w-80 md:h-80 rounded-xl shadow-2xl object-cover"
                             src="/img/aboutme.png"
                             alt="Profile"
+                            style={{
+                                boxShadow: '0 25px 50px -12px rgba(30, 64, 175, 0.15), 0 15px 30px -10px rgba(0, 0, 0, 0.1)'
+                            }}
                         />
                     </div>
 
@@ -30,7 +33,7 @@ export default function Sobremi() {
                         </p>
                         <p className="text-text-primary text-base md:text-lg">
                             {sobremiData.descripcion3}
-                        </p>
+                        </p>3 py-1.5 bg-accent/10 text-accent text-xs font-semibold rounded-full border border-accent/30
                         
                         <div className="pt-4">
                             <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg">
@@ -46,13 +49,13 @@ export default function Sobremi() {
                     {habilidadesData.map(habilidad => (
                         <div
                             key={habilidad.id}
-                            className="card p-8 text-center space-y-4"
+                            className="card p-8 text-center space-y-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                         >
                             <div className="flex justify-center">
                                 <img
                                     src={`/img/brands/${habilidad.icon}`}
                                     alt={habilidad.name}
-                                    className="w-20 h-20 object-contain"
+                                    className="w-20 h-20 object-contain opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-300"
                                 />
                             </div>
                             <h3 className="text-primary font-title font-bold text-xl uppercase">
