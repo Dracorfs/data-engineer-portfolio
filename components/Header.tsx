@@ -1,18 +1,24 @@
 import { useState } from 'react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 
-export default function Header() {
+interface NavLink {
+  id: number;
+  name: string;
+  link: string;
+}
+
+const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
+  const toggleMenu = (): void => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const closeMenu = () => {
+  const closeMenu = (): void => {
     setIsMenuOpen(false);
   };
 
-  const navLinks = [
+  const navLinks: NavLink[] = [
     { id: 1, name: "About", link: "#aboutme" },
     { id: 2, name: "Projects", link: "#projects" },
     { id: 3, name: "Contact", link: "#contact" }
@@ -44,7 +50,7 @@ export default function Header() {
           id="navbar-default"
         >
           <ul className="flex flex-col md:flex-row md:space-x-8 p-4 md:p-0">
-            {navLinks.map(link => (
+            {navLinks.map((link: NavLink) => (
               <li key={link.id}>
                 <a
                   href={link.link}
@@ -60,4 +66,6 @@ export default function Header() {
       </div>
     </nav>
   );
-}
+};
+
+export default Header;
