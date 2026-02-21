@@ -33,7 +33,7 @@ export default function Sobremi() {
                         </p>
                         <p className="text-text-primary text-base md:text-lg">
                             {sobremiData.descripcion3}
-                        </p>3 py-1.5 bg-accent/10 text-accent text-xs font-semibold rounded-full border border-accent/30
+                        </p>
                         
                         <div className="pt-4">
                             <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg">
