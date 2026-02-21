@@ -21,7 +21,7 @@ export default function Proyectos() {
                 </h2>
 
                 {/* Projects grid */}
-                <div className="grid md:grid-cols-2 gap-8">
+                <div className="grid md:grid-cols-3 gap-8">
                     {proyectosData.map(proyecto => {
                         const bigProyImg = bigProyImgs[proyecto.id] || proyecto.imagenes[0];
                         

@@ -19,7 +19,7 @@ export default function Header() {
   ];
 
   return (
-    <nav className="fixed w-full top-0 z-50 bg-white bg-opacity-95 backdrop-blur-md border-b border-border-color shadow-sm">
+    <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-border-color shadow-md hover:shadow-lg transition-shadow duration-300">
       <div className="section-container flex items-center justify-between py-4">
         {/* Mobile menu button */}
         <button
