@@ -1,19 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Neuton:ital@1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-  /* background-color: #1c0531; */
-  /* background-color: #2a383a; */
-  background-color: #07090D;
-  /* background-image: linear-gradient(to right bottom, #3e4454, #353946, #2c2e38, #22232b, #19191e, #19191e, #19191e, #19191e, #22232b, #2c2e38, #353946, #3e4454); */
+/* Base styles */
+html {
+  scroll-behavior: smooth;
 }
 
+body {
+  background-color: #0f172a;
+  color: #1e293b;
+  font-family: 'Maven Pro', sans-serif;
+}
+
+/* Typography hierarchy */
 @layer base {
-  html {
-    @apply scroll-smooth;
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-title font-bold tracking-tight;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+  
+  p {
+    @apply text-base leading-relaxed;
+  }
+}
+
+/* Custom components */
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-colors duration-300;
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-3 border-2 border-primary text-primary font-semibold rounded-lg hover:bg-primary hover:text-white transition-all duration-300;
+  }
+  
+  .section-container {
+    @apply max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8;
+  }
+  
+  .section-title {
+    @apply text-primary font-title font-bold text-center mb-12;
+  }
+  
+  .card {
+    @apply rounded-xl border border-border-color bg-white shadow-sm hover:shadow-md transition-shadow duration-300;
   }
 }

@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { proyectosData } from "../data/proyectosData";
 import ProyCard from "./ProyCard";
-import { IconGlobal, IconGithub } from "./Icons";
 
 export default function Proyectos() {
-    const [ bigProyImgs, setBigProyImgs ] = useState({})
+    const [bigProyImgs, setBigProyImgs] = useState({});
+
     const updateBigProyImg = (proyectoId, imgURL) => {
         setBigProyImgs((prevBigProyImgs) => ({
             ...prevBigProyImgs,
@@ -12,50 +12,82 @@ export default function Proyectos() {
         }));
     };
 
-    return(
-        <div>
-            <div id="projects" className="max-w-screen-xl mx-auto md:w-5/6 lg:w-4/6 pt-10">
-                <h2 className="text-4xl font-title font-extrabold tracking-wider leading-none md:text-5xl lg:text-5xl text-[#004E98] text-center mt-5 mb-10">Projects</h2>
-                <div className="grid place-content-center md:grid-cols-2 lg:grid-cols-2 gap-6 mb-10 md:mx-0 px-3 md:px-0">
-                    {proyectosData.map(proyecto =>{
+    return (
+        <section id="projects" className="py-20">
+            <div className="section-container">
+                {/* Section title */}
+                <h2 className="section-title text-4xl md:text-5xl">
+                    Featured Projects
+                </h2>
+
+                {/* Projects grid */}
+                <div className="grid md:grid-cols-2 gap-8">
+                    {proyectosData.map(proyecto => {
                         const bigProyImg = bigProyImgs[proyecto.id] || proyecto.imagenes[0];
+                        
                         return (
-                            <div key={proyecto.id}
-                                className=" overflow-hidden flex flex-col bg-[#242424] border border-[#3A6EA5] border-opacity-20 bg-opacity-20 rounded-lg">
-                                <div className='flex flex-col lg:flex-row justify-center items-center px-3'>
-                                    <div className="lg:order-2">
-                                        <img
-                                            src={`/img/${bigProyImg}`}
-                                            alt={`imagen ${bigProyImg}`}
-                                            className=''
-                                        />
-                                    </div>
+                            <div key={proyecto.id} className="card overflow-hidden flex flex-col h-full">
+                                {/* Project image */}
+                                <div className="relative overflow-hidden bg-gray-100 h-48">
+                                    <img
+                                        src={`/img/${bigProyImg}`}
+                                        alt={proyecto.nombreProyecto}
+                                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                                    />
                                 </div>
-                                <div className="h-full flex flex-col justify-between px-5">
-                                    <div>
-                                        <h5 className="flex flex-col my-3 text-xl text-center text-[#004E98] font-bold tracking-tight">{proyecto.nombreProyecto}</h5>
-                                        <ul className="flex items-center justify-center gap-3 mb-2">
-                                        {proyecto.tecnologias.map((tecnologia, index) => (
-                                            <li key={index} className="flex items-center gap-1 text-[#EBEBEB] px-4 py-1.5 text-sm font-medium border border-text border-opacity-30 rounded-full bg-[#07090D] bg-opacity-60">
-                                                <img className="w-5 h-5" src={`/img/${tecnologia.image}`} alt={`imagen de logo ${tecnologia.nombre}`}/>
-                                                <p>{tecnologia.name}</p>
-                                            </li>
-                                        ))}
-                                        </ul>
-                                        <p className="mb-4 font-normal text-grisclaro2 [text-wrap:pretty]">{proyecto.descripcionProyecto}</p>
+
+                                {/* Project content */}
+                                <div className="flex flex-col justify-between flex-grow p-6">
+                                    {/* Title and description */}
+                                    <div className="space-y-4">
+                                        <h3 className="text-primary font-title font-bold text-xl">
+                                            {proyecto.nombreProyecto}
+                                        </h3>
+
+                                        <p className="text-text-secondary text-sm">
+                                            {proyecto.descripcionProyecto}
+                                        </p>
+
+                                        {/* Tech stack */}
+                                        <div className="flex flex-wrap gap-2">
+                                            {proyecto.tecnologias.map((tech, index) => (
+                                                <div
+                                                    key={index}
+                                                    className="flex items-center gap-1 px-3 py-1 bg-gray-100 rounded-full text-xs font-medium text-text-primary"
+                                                >
+                                                    <img
+                                                        className="w-4 h-4"
+                                                        src={`/img/${tech.image}`}
+                                                        alt={tech.name}
+                                                    />
+                                                    <span>{tech.name}</span>
+                                                </div>
+                                            ))}
+                                        </div>
                                     </div>
-                                    <div className="flex gap-3 items-center justify-center pb-5">
-                                        <a target="_blank" href={proyecto.link} className="flex flex-1 gap-1 items-center justify-center py-2.5 px-5 text-sm text-white font-medium  bg-transparent rounded-full border transition duration-300 hover:bg-colorboton hover:scale-105 hover:shadow-[0_0_20px_3px_rgba(58,110,165,0.7)]">
-                                            {proyecto.webpage_name}
-                                            <img className="w-5 h-5" src={`/img/${proyecto.webpage_logo}`} alt={`imagen de logo ${proyecto.webpage_name}`}/>
+
+                                    {/* Project links */}
+                                    <div className="flex gap-3 pt-6">
+                                        <a
+                                            target="_blank"
+                                            href={proyecto.link}
+                                            rel="noopener noreferrer"
+                                            className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-primary text-white font-medium rounded-lg hover:bg-primary-dark transition-colors duration-300"
+                                        >
+                                            <span>{proyecto.webpage_name}</span>
+                                            <img
+                                                className="w-4 h-4"
+                                                src={`/img/${proyecto.webpage_logo}`}
+                                                alt={proyecto.webpage_name}
+                                            />
                                         </a>
                                     </div>
                                 </div>
                             </div>
-                        )
+                        );
                     })}
                 </div>
             </div>
-        </div>
-    )
+        </section>
+    );
 }

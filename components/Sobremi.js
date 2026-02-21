@@ -1,41 +1,70 @@
 import { sobremiData, habilidadesData } from "../data/sobremiData"
 
 export default function Sobremi() {
+    return (
+        <section id="aboutme" className="py-20 bg-bg-light">
+            <div className="section-container">
+                {/* Section title */}
+                <h2 className="section-title text-4xl md:text-5xl">
+                    {sobremiData.titulo}
+                </h2>
 
-    return(
-        <div>
-            <div id="aboutme" className="max-w-screen-xl mx-auto md:w-5/6 lg:w-4/6 px-3 md:px-0 pt-10">
-                <h2 className="text-4xl font-title font-extrabold tracking-wider leading-none md:text-5xl lg:text-5xl text-[#004e98] text-center mt-5 mb-10">{sobremiData.titulo}</h2>
-                <div className="md:flex gap-8 items-center justify-between md:mx-0">
-                    <img 
-                        className="border-8 border-[#242424]"
-                        src="/img/aboutme.jpg" 
-                        alt="Imagen Andres Martinez"
-                    />
-                    <div className="md:w-3/5">
-                        <p className="mb-4 text-[#242424] lg:text-base 2xl:text-lg [text-wrap:pretty]">{sobremiData.descripcion1}</p>
-                        <p className="mb-4 text-[#242424] lg:text-base 2xl:text-lg [text-wrap:pretty]">{sobremiData.descripcion2}</p>
-                        <p className="mb-4 text-[#242424] lg:text-base 2xl:text-lg [text-wrap:pretty]">{sobremiData.descripcion3}</p>
-                        <span className='inline-flex h-full animate-background-shine items-center justify-center rounded-full border border-text border-opacity-30 bg-[linear-gradient(110deg,#07090D,45%,#4D4B4B,55%,#07090D)] bg-[length:250%_100%] px-5 py-1.5 text-sm font-medium text-text backdrop-blur-3xl'>
-                            Open to work
-                        </span>
+                {/* About content */}
+                <div className="grid md:grid-cols-2 gap-10 items-center mb-16">
+                    {/* Image */}
+                    <div className="flex justify-center">
+                        <img
+                            className="w-64 h-64 md:w-80 md:h-80 rounded-xl shadow-lg object-cover border-4 border-primary"
+                            src="/img/aboutme.png"
+                            alt="Profile"
+                        />
+                    </div>
+
+                    {/* Text content */}
+                    <div className="space-y-4">
+                        <p className="text-text-primary text-base md:text-lg">
+                            {sobremiData.descripcion1}
+                        </p>
+                        <p className="text-text-primary text-base md:text-lg">
+                            {sobremiData.descripcion2}
+                        </p>
+                        <p className="text-text-primary text-base md:text-lg">
+                            {sobremiData.descripcion3}
+                        </p>
+                        
+                        <div className="pt-4">
+                            <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg">
+                                <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
+                                Open to work
+                            </span>
+                        </div>
                     </div>
                 </div>
-                <ul className=" grid gap-8 grid-cols-1 md:grid-cols-3 my-10">
-                    {habilidadesData.map(habilidades => (
-                        <li key={habilidades.id} className="relative h-full rounded-xl bg-[#242424] border border-[#3A6EA5] border-opacity-20 py-5 px-5 bg-opacity-10 [text-wrap:pretty] text-center flex flex-col items-center">
-                            <div className='absolute top-0 flex w-full justify-center'>
-                                <div className='left-0 h-[1px] animate-border-width rounded-full bg-gradient-to-r from-[rgba(17,17,17,0)] via-[#EBEBEB] to-[rgba(17,17,17,0)] transition-all duration-1000' />
+
+                {/* Skills grid */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {habilidadesData.map(habilidad => (
+                        <div
+                            key={habilidad.id}
+                            className="card p-8 text-center space-y-4"
+                        >
+                            <div className="flex justify-center">
+                                <img
+                                    src={`/img/brands/${habilidad.icon}`}
+                                    alt={habilidad.name}
+                                    className="w-20 h-20 object-contain"
+                                />
                             </div>
-                            <div className="flex flex-col items-center space-y-2">
-                                <img src={`/img/brands/${habilidades.icon}`} alt={`imagen de ${habilidades.name}`} className="w-20 h-20 p-2 border border-grisclaro border-opacity-40 rounded-full" />
-                                <h3 className="text-[#3A6EA5] uppercase font-semibold text-lg">{habilidades.name}</h3>
-                                <p className="text-[#242424] font-text text-base">{habilidades.description}</p>
-                            </div>
-                        </li>
+                            <h3 className="text-primary font-title font-bold text-xl uppercase">
+                                {habilidad.name}
+                            </h3>
+                            <p className="text-text-secondary text-sm">
+                                {habilidad.description}
+                            </p>
+                        </div>
                     ))}
-                </ul>
+                </div>
             </div>
-        </div>
+        </section>
     )
 }

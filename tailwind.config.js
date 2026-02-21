@@ -9,53 +9,39 @@ module.exports = {
       fontFamily: {
         'title': ['Montserrat'],
         'secundary': ['Neuton'],
-        'text': ['Maven Pro'] //['source-serif-pro', 'Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif']
+        'text': ['Maven Pro']
       },
       colors: {
+        // Primary colors
+        primary: "#1e40af",      // Azul corporativo profesional
+        'primary-dark': "#1e3a8a",  // Azul oscuro
+        'primary-light': "#3b82f6", // Azul claro
+        
+        // Neutrals
+        'bg-dark': "#0f172a",    // Fondo muy oscuro
+        'bg-darker': "#020617",  // Fondo prácticamente negro
+        'bg-light': "#f8fafc",   // Fondo claro
+        'text-primary': "#1e293b", // Texto principal oscuro
+        'text-secondary': "#64748b", // Texto secundario gris
+        'text-light': "#f1f5f9", // Texto claro
+        'border-color': "#e2e8f0", // Bordes
+        
+        // Accent
+        accent: "#0891b2",        // Cyan para acentos
+        'accent-light': "#06b6d4",
+        
+        // Semantic colors (mantenidos para transición)
         transparent: "transparent",
-        gris: "#2b2b2b",
         white: "#ffffff",
-        blackchido: "#131313",
-        background: "#07090D",
-        negrochido: "#09090b",
-        verde: "#1ebd5c",
-        grisclaro: "#86868b",
-        grisclaro2: "#d1d5db",
-        grisclaro3: "#9ca3af",
-        grisoscuro: "#1a1a1a",
-        naranja: "#FF6D09",
-        naranja700: "#c2410c",
-        azul: "#010309",
-        textdestacado: "#3a6ea5",
-        colorboton: "#004e98",
-        colorboton2: "#441e7d",
-        text: "#AEB3B9"
+      },
+      spacing: {
+        'section': '5rem',
       },
       "animation": {
-        "background-shine": "background-shine 3s linear infinite",
-        "border-width": "border-width 3s infinite alternate",
         'infinite-scroll': 'infinite-scroll 60s linear infinite',
         'infinite-scroll-reverse': 'infinite-scroll-reverse 35s linear infinite'
       },
       "keyframes": {
-        "background-shine": {
-          "from": {
-            "backgroundPosition": "0 0"
-          },
-          "to": {
-            "backgroundPosition": "-200% 0"
-          }
-        },
-        "border-width": {
-          "from": {
-            "width": "10px",
-            "opacity": "0"
-          },
-          "to": {
-            "width": "200px",
-            "opacity": "1"
-          }
-        },
         'infinite-scroll': {
           from: { transform: 'translateX(0)' },
           to: { transform: 'translateX(-80%)' },
@@ -66,7 +52,6 @@ module.exports = {
         }
       }
     },
-    
   },
   plugins: [],
 }

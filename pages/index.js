@@ -9,15 +9,13 @@ import "react-toastify/dist/ReactToastify.css"
 
 export default function Home() {
   return (
-    <Layout>  
-        <Landing />
-        <div className="[background-image:url(/img/bg-web.svg)]">
-          <Sobremi />
-          <Proyectos />
-          <Tecnologias />
-          <Contacto />
-          <ToastContainer/>
-        </div>
+    <Layout>
+      <Landing />
+      <Sobremi />
+      <Proyectos />
+      <Tecnologias />
+      <Contacto />
+      <ToastContainer />
     </Layout>
   )
 }
