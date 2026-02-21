@@ -18,8 +18,8 @@ export const proyectosData = [
     },
     {
         id: 2,
-        nombreProyecto: "Limpieza de dataset",
-        descripcionProyecto: "Limpieza de dataset, creacion de base de datos.",
+        nombreProyecto: "Data Cleaning & Database Design",
+        descripcionProyecto: "Dataset cleaning and database creation.",
         link: "https://github.com/Andres12893/car_prices_project",
         webpage_name: "GitHub",
         webpage_logo: "github.svg",
