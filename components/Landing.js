@@ -2,7 +2,7 @@ import { headerData } from "../data/headerData";
 
 export default function Landing() {
     return (
-        <section id="inicio" className="relative min-h-screen pt-24 pb-12 md:pt-16 md:pb-20 flex items-center justify-center overflow-hidden">
+        <section id="inicio" className="relative min-h-[calc(100vh-72px)] flex items-center justify-center overflow-hidden">
             {/* Noise/Grain overlay - very subtle */}
             <div className="absolute inset-0 opacity-[0.015] mix-blend-overlay pointer-events-none"
                 style={{
