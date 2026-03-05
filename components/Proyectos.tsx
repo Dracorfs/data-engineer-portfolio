@@ -22,7 +22,7 @@ const Proyectos = () => {
                   <img
                     src={`/img/${proyecto.imagenes[0]}`}
                     alt={proyecto.nombreProyecto}
-                    className="w-full h-full object-cover transition duration-500 hover:scale-105"
+                    className="w-full h-full object-cover transition duration-500 hover:scale-105 saturate-[.70]"
                   />
                   {/* Subtle vignette */}
                   <div className="absolute inset-0 ring-1 ring-inset ring-black/10 pointer-events-none" />
