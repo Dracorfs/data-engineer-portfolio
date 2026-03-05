@@ -15,20 +15,18 @@ const ProyCard = ({ imgURL, changeBigProyImage, bigProyImg, isFirstImage }: Proy
   return (
     <>
       <div
-        className={`border rounded-xl ${
-          bigProyImg === imgURL
-            ? "border-grisclaro border-opacity-60 shadow-[0_0_10px_1px_rgba(30,125,103,0.7)]"
-            : "border-transparent"
-        } cursor-pointer max-sm:flex-1 ${
-          isFirstImage ? "first-image-style" : ""
-        }`}
+        className={`border rounded-2xl transition duration-300 ${bigProyImg === imgURL
+            ? "border-white/50 bg-white/10 shadow-lg"
+            : "border-transparent hover:bg-white/5"
+          } cursor-pointer max-sm:flex-1 ${isFirstImage ? "first-image-style" : ""
+          }`}
         onClick={handleClick}
       >
-        <div className='flex justify-center items-center w-12 h-12 rounded-xl'>
+        <div className='flex justify-center items-center w-12 h-12 rounded-2xl'>
           <img
             src={`/img/${imgURL}.webp`}
             alt={`imagen de ${imgURL}`}
-            className='object-contain'
+            className='object-contain w-8 h-8 opacity-90'
           />
         </div>
       </div>

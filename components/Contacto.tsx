@@ -32,7 +32,7 @@ const Contacto = () => {
     emailjs.sendForm('service_1n4md0r', 'template_wzrsakf', form.current, '5Jb2xVlkRNAwR_TI1')
       .then(() => {
         toast.success("Message sent successfully!", {
-          theme: "colored"
+          theme: "dark"
         });
 
         setFormValues({});
@@ -40,7 +40,7 @@ const Contacto = () => {
         setFormError(false);
       })
       .catch((error) => {
-        toast.error("Error sending message. Please try again.");
+        toast.error("Error sending message. Please try again.", { theme: "dark" });
         console.log(error.text);
       });
   };
@@ -53,35 +53,35 @@ const Contacto = () => {
   };
 
   return (
-    <section id='contact' className="py-20 bg-bg-light">
+    <section id='contact' className="py-24 relative overflow-hidden">
       {/* Noise overlay */}
-      <div className="absolute inset-0 opacity-[0.01] mix-blend-overlay pointer-events-none"
+      <div className="absolute inset-0 opacity-[0.03] mix-blend-overlay pointer-events-none"
         style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' seed='2' /%3E%3C/filter%3E%3Crect width='400' height='400' fill='%23000000' filter='url(%23noiseFilter)' /%3E%3C/svg%3E")`,
           backgroundRepeat: 'repeat'
         }}
       />
-      <div className="section-container relative z-10">
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
         {/* Section title with gradient */}
-        <div className="relative inline-block mb-12">
-          <div className="absolute -inset-8 bg-gradient-to-r from-primary/12 via-accent/8 to-primary/12 rounded-lg blur-2xl -z-10" />
+        <div className="relative inline-block mb-16 text-center md:text-left">
+          <div className="absolute -inset-8 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.15),transparent_60%)] -z-10" />
           <div>
-            <h2 className="section-title text-4xl md:text-5xl relative">
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white">
               Get In Touch
             </h2>
-            <p className="text-text-secondary text-center md:text-left mt-3 text-base md:text-lg">
+            <p className="text-gray-400 mt-3 text-lg">
               Interested in data, BI or analytics projects? Let's talk.
             </p>
           </div>
         </div>
 
         {/* Contact content */}
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Contact form */}
           <div className="space-y-6">
             {formError && (
-              <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
-                <p className="text-red-700 text-sm font-medium">
+              <div className="p-4 bg-red-500/10 border border-red-500/20 rounded-xl">
+                <p className="text-red-400 text-sm font-medium">
                   Please complete all fields before submitting.
                 </p>
               </div>
@@ -98,7 +98,7 @@ const Contacto = () => {
 
               {/* Email field */}
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-text-primary mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                   Email Address
                 </label>
                 <input
@@ -108,14 +108,14 @@ const Contacto = () => {
                   value={formValues.email || ""}
                   onChange={handleInputChange}
                   placeholder="your@email.com"
-                  className="w-full px-4 py-3 border border-border-color rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                  className="w-full rounded-xl border border-white/20 bg-white/5 px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
                   required
                 />
               </div>
 
               {/* Message field */}
               <div>
-                <label htmlFor="mensaje" className="block text-sm font-medium text-text-primary mb-2">
+                <label htmlFor="mensaje" className="block text-sm font-medium text-gray-300 mb-2">
                   Message
                 </label>
                 <textarea
@@ -125,7 +125,7 @@ const Contacto = () => {
                   onChange={handleInputChange}
                   rows={5}
                   placeholder="Tell me about your project or opportunity..."
-                  className="w-full px-4 py-3 border border-border-color rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none"
+                  className="w-full rounded-xl border border-white/20 bg-white/5 px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all resize-none min-h-[120px]"
                   required
                 />
               </div>
@@ -133,7 +133,7 @@ const Contacto = () => {
               {/* Submit button */}
               <button
                 type="submit"
-                className="w-full inline-flex items-center justify-center gap-2 py-3 px-6 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-colors duration-300 mt-8"
+                className="w-full inline-flex items-center justify-center gap-2 py-3 px-6 bg-white text-slate-900 font-medium rounded-full transition duration-200 hover:scale-[1.02] mt-4"
               >
                 Start a Conversation
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
@@ -144,76 +144,74 @@ const Contacto = () => {
           </div>
 
           {/* Direct Contact Card */}
-          <div className="flex flex-col items-center justify-center">
-            <div className="card p-8 w-full max-w-sm text-center space-y-6">
+          <div className="flex flex-col items-center justify-center lg:items-end">
+            <div className="rounded-3xl border border-white/20 bg-white/10 backdrop-blur-xl shadow-xl w-full max-w-md flex flex-col items-center p-8 text-center gap-6 relative overflow-hidden">
+              <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-white/5 to-transparent pointer-events-none" />
               {/* Profile Photo */}
-              <div className="flex justify-center">
+              <div className="flex justify-center relative z-10">
                 <img
                   src="/img/aboutme.png"
                   alt="Andrés Martínez"
-                  className="w-24 h-24 rounded-full object-cover shadow-lg"
-                  style={{
-                    boxShadow: '0 10px 30px -8px rgba(30, 64, 175, 0.25)'
-                  }}
+                  className="w-24 h-24 rounded-full object-cover shadow-lg border-2 border-white/10"
                 />
               </div>
 
               {/* Name and Title */}
-              <div className="space-y-2">
-                <h3 className="text-2xl font-title font-bold text-primary">
+              <div className="space-y-1 relative z-10 text-center w-full">
+                <h3 className="text-xl font-semibold text-white">
                   Andrés Martínez
                 </h3>
-                <p className="text-text-secondary font-medium">
+                <p className="text-sm text-gray-400">
                   Business Intelligence Developer
                 </p>
               </div>
 
               {/* Status Badge */}
-              <div className="flex items-center justify-center gap-2 px-4 py-2 bg-accent/10 text-accent rounded-full border border-accent/30 w-fit mx-auto">
-                <span className="w-2.5 h-2.5 bg-accent rounded-full animate-pulse-slow" />
-                <span className="text-sm font-semibold">Open to opportunities</span>
+              <div className="flex items-center justify-center gap-2 px-4 py-2 bg-emerald-500/10 text-emerald-400 rounded-full border border-emerald-500/20 w-fit mx-auto relative z-10">
+                <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
+                <span className="text-sm font-medium">Open to opportunities</span>
               </div>
 
               {/* Email */}
-              <div className="space-y-2">
-                <p className="text-xs font-medium text-text-secondary uppercase tracking-wider">Email</p>
+              <div className="space-y-1 relative z-10 text-center w-full">
+                <p className="text-xs font-medium text-gray-500 uppercase tracking-wider">Email</p>
                 <a
                   href={`mailto:${contactoData.email}`}
-                  className="inline-block text-base font-semibold text-primary hover:text-primary-dark transition-colors break-all"
+                  className="inline-block text-base font-semibold text-blue-400 hover:text-blue-300 transition-colors break-all"
                 >
                   {contactoData.email}
                 </a>
               </div>
 
               {/* Timezone */}
-              <div className="space-y-2">
-                <p className="text-xs font-medium text-text-secondary uppercase tracking-wider">Timezone</p>
-                <p className="text-base font-semibold text-text-primary">
+              <div className="space-y-1 relative z-10 text-center w-full">
+                <p className="text-xs font-medium text-gray-500 uppercase tracking-wider">Timezone</p>
+                <p className="text-base text-gray-300">
                   America/Argentina/Buenos Aires
                 </p>
               </div>
 
               {/* Response Time */}
-              <div className="pt-4 border-t border-border-color">
-                <p className="text-sm text-text-secondary">
-                  <span className="font-semibold text-text-primary">Usually replies within 24h</span>
+              <div className="pt-4 border-t border-white/10 relative z-10 w-full text-center">
+                <p className="text-sm text-gray-400">
+                  Usually replies within <span className="font-semibold text-gray-300">24h</span>
                 </p>
               </div>
 
               {/* Social Links */}
-              <div className="pt-2">
-                <ul className='flex gap-4 justify-center'>
+              <div className="pt-2 relative z-10 flex justify-center w-full">
+                <ul className='flex items-center justify-center gap-4'>
                   {redesData.map(red => (
                     <li key={red.id} className="group relative">
                       <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href={red.sitioWeb}
-                        className="w-12 h-12 flex items-center justify-center rounded-lg bg-gray-100 hover:bg-accent hover:text-white transition-all duration-300"
+                        className="w-10 h-10 flex items-center justify-center rounded-lg bg-white/10 hover:bg-white/20 transition-colors"
                       >
-                        <img className='w-5 h-5 group-hover:scale-110 transition-transform duration-300' src={`/img/${red.imagen}`} alt={red.nombre} />
+                        <img className='w-5 h-5 opacity-90 group-hover:opacity-100' src={`/img/${red.imagen}`} alt={red.nombre} />
                       </a>
-                      <span className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 px-2 py-1 text-xs font-semibold text-white bg-text-primary rounded-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-50">
+                      <span className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 px-2 py-1 text-xs font-medium text-white bg-slate-800 rounded-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-50">
                         {red.nombre}
                       </span>
                     </li>

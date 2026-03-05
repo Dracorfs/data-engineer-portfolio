@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Neuton:ital@1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -12,53 +10,19 @@ html {
 }
 
 body {
-  background-color: #0f172a;
-  color: #1e293b;
-  font-family: 'Maven Pro', sans-serif;
+  @apply bg-slate-950 text-gray-400 antialiased selection:bg-white/10 selection:text-white;
 }
 
-/* Typography hierarchy */
 @layer base {
   h1, h2, h3, h4, h5, h6 {
-    @apply font-title font-bold tracking-tight;
-  }
-  
-  h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl;
-  }
-  
-  h2 {
-    @apply text-3xl md:text-4xl lg:text-5xl;
-  }
-  
-  h3 {
-    @apply text-2xl md:text-3xl;
-  }
-  
-  p {
-    @apply text-base leading-relaxed;
+    @apply font-sans;
   }
 }
 
 /* Custom components */
 @layer components {
-  .btn-primary {
-    @apply px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-colors duration-300;
-  }
-  
-  .btn-secondary {
-    @apply px-6 py-3 border-2 border-primary text-primary font-semibold rounded-lg hover:bg-primary hover:text-white transition-all duration-300;
-  }
-  
+  /* Retain for compatibility during transition, but shouldn't be heavily used */
   .section-container {
-    @apply max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8;
-  }
-  
-  .section-title {
-    @apply text-primary font-title font-bold text-center mb-12;
-  }
-  
-  .card {
-    @apply rounded-xl border border-border-color bg-white shadow-sm hover:shadow-md transition-shadow duration-300;
+    @apply max-w-6xl mx-auto px-6;
   }
 }
