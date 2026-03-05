@@ -12,7 +12,7 @@ const Landing = () => {
       />
 
       {/* Subtle radial background gradient */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.15),transparent_60%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(59,130,246,0.15),transparent_50%)] pointer-events-none" />
 
       {/* Content */}
       <div className="max-w-6xl mx-auto px-6 relative z-10 w-full">

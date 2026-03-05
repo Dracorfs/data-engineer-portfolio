@@ -6,7 +6,7 @@ const Proyectos = () => {
       <div className="max-w-6xl mx-auto px-6">
         {/* Section title */}
         <div className="relative mb-16 text-center">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.15),transparent_60%)] -z-10" />
+          <div className="absolute -inset-y-12 inset-x-0 bg-[radial-gradient(ellipse_at_center,rgba(59,130,246,0.15),transparent_50%)] -z-10" />
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white">
             Featured Projects
           </h2>
