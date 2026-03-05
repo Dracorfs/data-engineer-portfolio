@@ -21,7 +21,7 @@ module.exports = {
       keyframes: {
         'infinite-scroll': {
           from: { transform: 'translateX(0)' },
-          to: { transform: 'translateX(-80%)' },
+          to: { transform: 'translateX(-50%)' },
         },
         'infinite-scroll-reverse': {
           from: { transform: 'translateX(0)' },

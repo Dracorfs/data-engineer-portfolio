@@ -27,8 +27,8 @@ const Tecnologias = () => {
           <div className="absolute right-0 top-0 w-24 h-full bg-gradient-to-l from-slate-950 to-transparent z-10 pointer-events-none" />
 
           {/* Scrolling container */}
-          <div className="overflow-hidden">
-            <div className="flex gap-6 py-8 animate-infinite-scroll">
+          <div className="overflow-hidden flex">
+            <div className="flex w-max gap-6 py-8 animate-infinite-scroll">
               {[...tecnologiasData, ...tecnologiasData].map((tech, index) => (
                 <div
                   key={index}
