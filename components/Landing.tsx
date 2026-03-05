@@ -61,15 +61,16 @@ const Landing = () => {
           </div>
 
           {/* Decorative image */}
-          <div className="hidden lg:flex justify-end items-center">
-            <div className="relative w-80 h-80 rounded-3xl border border-white/20 bg-white/5 backdrop-blur-xl p-8 flex items-center justify-center shadow-xl">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent rounded-3xl pointer-events-none" />
-              <img
-                src="/img/redes.png"
-                alt="Social networks illustration"
-                className="relative w-full h-full object-contain filter drop-shadow-lg transition duration-300 hover:-translate-y-1"
-              />
-            </div>
+          <div className="hidden lg:flex justify-end items-center relative h-full">
+            {/* Soft backdrop glow to help it blend */}
+            <div className="absolute w-[120%] h-[120%] bg-blue-500/10 rounded-full blur-[100px] pointer-events-none mix-blend-screen" />
+
+            {/* The scaled, rotated, slightly blurred image */}
+            <img
+              src="/img/redes.png"
+              alt="Social networks illustration"
+              className="relative w-full max-w-lg object-contain opacity-80 blur-[0.2px] mix-blend-screen transition-all duration-700 [transform:perspective(1000px)_rotateX(20deg)_rotateY(-20deg)_rotateZ(5deg)_scale(1.1)] hover:[transform:perspective(1000px)_rotateX(10deg)_rotateY(-5deg)_rotateZ(0deg)_scale(1.15)] hover:opacity-100"
+            />
           </div>
         </div>
       </div>
